@@ -1,0 +1,18 @@
+.btn {
+    background-color: #FF5734;
+    color: white;
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #9F3421;
+  }
+  
+  .btn-square {
+    border-radius: 5px;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    color: #FF9E34;
+  }

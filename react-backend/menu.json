@@ -1,0 +1,26 @@
+[
+    {
+      "id": 100,
+      "name": "Sushi",
+      "price": 199,
+      "description": "Preparado con nuestro mejor salmón"
+    },
+    {
+      "id": 200,
+      "name": "Schnitzel",
+      "price": 99,
+      "description": "Una especialidad Alemana"
+    },
+    {
+      "id": 300,
+      "name": "Enchiladas",
+      "price": 129,
+      "description": "Platillo típico mexicano"
+    },
+    {
+      "id": 400,
+      "name": "Taquitos al Pastor",
+      "price": 25,
+      "description": "El mejor platillo del mundo mundial"
+    }
+  ]

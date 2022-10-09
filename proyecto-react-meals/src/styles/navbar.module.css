@@ -1,0 +1,25 @@
+.navbar {
+    height: 80px;
+    background-color: #FF9E34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    color: white;
+  }
+  
+  .navbar > figure {
+    background-color: #FF5734;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .navbar > figure > small {
+    background-color: #FF9E34;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
