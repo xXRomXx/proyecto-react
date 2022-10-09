@@ -1,13 +1,19 @@
 .menu-container {
-    padding: 10px 30px;
-  }
+  padding: 10px 30px;
+}
+
+  img {
+    width: 100px;
+    height: 100px;
+ }
   
   .menu {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 1px solid #aaa;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 8px 8px 20px #111;
+    cursor: pointer;
   }
   
   .menu > article {
@@ -22,6 +28,12 @@
   
   .menu-item {
     display: flex;
+    justify-content: space-between;
+  }
+
+  menu-item > article :hover{
+    display: flex;
+    background-color: rgb(161, 161, 161);
     justify-content: space-between;
   }
   
@@ -47,11 +59,11 @@
   }
   
   .input-container > input {
-    width: 35px;
+    width: 75px;
     font-size: 15px;
     margin-bottom: 10px;
     border: 1px solid #aaa;
     border-radius: 5px;
-    margin-left: 10px;
     padding: 5px;
+    
   }

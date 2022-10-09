@@ -6,6 +6,8 @@ import StateContext from "../contexts/state";
 import { useContext } from "react";
 import actions from "../reducers/actions";
 import { Link } from "react-router-dom";
+import { AiFillMinusCircle } from "react-icons/ai";
+import { FcPlus } from 'react-icons/fc';
 
 function CartModal() {
 	const { state, dispatch } = useContext(StateContext);
@@ -30,6 +32,13 @@ function CartModal() {
 		});
 	}
 
+	function validarCantidad(cartItem){
+		console.log(cartItem);
+		if (cartItem.quantity > 0) {
+			decrement(cartItem.meal.id);
+		}
+	}
+
 	return state.isOpen ? (
 		<>
 			<Backdrop />
@@ -48,20 +57,24 @@ function CartModal() {
 									</div>
 								</article>
 								<article>
-									<Button
+									<AiFillMinusCircle
+										className={styles["minus-button"]}
+										size='40px'
 										outline
 										square
-										onClick={() => decrement(cartItem.meal.id)}
+										onClick={() => validarCantidad(cartItem)}
 									>
 										-
-									</Button>
-									<Button
+									</AiFillMinusCircle>
+									<FcPlus
+										className={styles["plus-button"]}
+										size='40px'
 										outline
 										square
 										onClick={() => increment(cartItem.meal.id)}
 									>
 										+
-									</Button>
+									</FcPlus>
 								</article>
 							</section>
 						</li>

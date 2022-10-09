@@ -9,16 +9,30 @@
   }
   
   .navbar > figure {
-    background-color: #FF5734;
+    background-color: #1597ca;
     padding: 10px 30px;
     border-radius: 20px;
     font-weight: bold;
     font-size: 18px;
     margin: 0;
+    display: flex;
   }
-  
+
+  .navbar > figure:hover{
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    
+  }
+  .navbar > figure:active{
+    cursor: pointer;
+    border: 3px solid rgb(255, 255, 255);
+    display: flex;
+    
+  }
+
   .navbar > figure > small {
-    background-color: #FF9E34;
+    background-color: #4b60bd;
     border-radius: 50%;
     padding: 5px 10px;
     margin-left: 10px;

@@ -1,11 +1,23 @@
 .btn {
-    background-color: #FF5734;
+    background-color: #1b9e38;
     color: white;
     font-weight: bold;
-    padding: 8px 25px;
-    border-radius: 20px;
+    padding: 10px 10px;
+    border-radius: 300px;
     font-size: 13px;
-    border: 1px solid #9F3421;
+    border: 1px solid #195827;
+  }
+  
+  .btn:hover{
+    cursor: pointer;
+    padding: 11px 11px;
+    border-radius: 300px;
+    font-size: 13px;
+  }
+
+  .btn:active{
+    cursor: pointer;
+    border: 3px solid #195827;
   }
   
   .btn-square {

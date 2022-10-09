@@ -65,3 +65,23 @@
   .cart-item > article:nth-child(2) > * {
     margin-left: 10px;
   }
+  
+  .minus-button:hover{
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  
+  .minus-button:active{
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255);
+  }
+
+  .plus-button:hover{
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  .plus-button:active{
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255);
+  }
