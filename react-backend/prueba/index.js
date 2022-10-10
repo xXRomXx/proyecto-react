@@ -9,10 +9,14 @@ import {
 
 const taskForm = document.getElementById("task-form");
 const tasksContainer = document.getElementById("tasks-container");
+//import fs from 'fs';
+//import {fs} from 'fs';
+
+import sobreEscribir from '../DBloader.js';
 
 let editStatus = false;
 let id = "";
-//const fs = require('fs');
+//const fs = require("fs");
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   // const querySnapshot = await getTasks();
@@ -22,6 +26,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
   onGetTasks((querySnapshot) => {
     tasksContainer.innerHTML = "";
+
+    sobreEscribir(querySnapshot);
 
     querySnapshot.forEach((doc) => {
       const task = doc.data();
@@ -69,17 +75,6 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           id = doc.id;
           taskForm["btn-task-form"].innerText = "Update";
 
-          onGetTasks((querySnapshot) => {
-            let platillosNuevos = JSON.stringify(querySnapshot);
-            
-            writeFile('./menu.json', platillosNuevos, (error) =>{
-            if(error){
-                console.log(`Error: ${error}`);
-            }else{
-                console.log("Archivo modificado correctamente.")
-            }
-          })
-        })
 
         } catch (error) {
           console.log(error);

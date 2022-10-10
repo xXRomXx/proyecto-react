@@ -7,12 +7,12 @@ const app = express();
 app.use(cors());
 
 app.get("/meals", function (_, response) {
-	response.json(meals);
+	response.json(meals.dishes);
 });
 
 app.get("/meals/:id", function (request, response) {
 	const { id } = request.params;
-	const meal = meals.find((x) => x.id.toString() === id.toString());
+	const meal = meals.dishes.find((x) => x.id.toString() === id.toString());
 	response.json(meal);
 });
 

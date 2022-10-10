@@ -20,8 +20,7 @@
 
 //ESCRIBIR EN UN ARCHIVO JSON 
 
-//const fs = require('fs');
-//
+
 //let data = {
 //   dishes: [
 //        {
@@ -63,17 +62,19 @@
 //      console.log("Archivo generado correctamente")
 //  }
 //})
-//
-//export function sobreEscribir (data) {
-//
-//  let platillosNuevos = JSON.stringify(data)
-//  
-//  fs.writeFile('./menu.json', platillosNuevos, (error) =>{
-//  if(error){
-//      console.log(`Error: ${error}`);
-//  }else{
-//      console.log("Archivo modificado correctamente.")
-//  }
-//})
-//}
-//
+
+const fs = require("fs");
+//import fs from 'fs';
+
+export default function sobreEscribir (data) {
+
+  let platillosNuevos = JSON.stringify(data)
+  
+  fs.writeFile('./menu.json', platillosNuevos, (error) =>{
+  if(error){
+      console.log(`Error: ${error}`);
+  }else{
+      console.log("Archivo modificado correctamente.")
+  }
+})
+}

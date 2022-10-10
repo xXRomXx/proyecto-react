@@ -7,10 +7,6 @@ import actions from "../reducers/actions";
 import { useNavigate } from "react-router-dom";
 import { FcPlus } from 'react-icons/fc';
 
-import {
-	onGetTasks,
-  } from "../database/firebase.js";
-  
 function Menu() {
 
 	useEffect(() => {
@@ -18,15 +14,7 @@ function Menu() {
 		// querySnapshot.forEach((doc) => {
 		//   console.log(doc.data());
 		// });
-	  
-		onGetTasks((querySnapshot) => {
-	  
-		  querySnapshot.forEach((doc) => {
-			const task = doc.data();
-			console.log(task);
-		  
-		  });
-		});
+		
 	  }, []);
 
 	const inputs = useRef([]);
@@ -56,7 +44,6 @@ function Menu() {
 	return (
 		<div id="menu-container" className={styles["menu-container"]}>
 			<section className={styles.menu}>
-				
 				{meals.map((item, index) => (
 					<article key={item.id}>
 						<div className={styles["menu-item"]}>
