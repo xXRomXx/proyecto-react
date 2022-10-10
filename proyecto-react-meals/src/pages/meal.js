@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import StateContext from "../contexts/state";
 import useHttp from "../hooks/useHttp";
 import actions from "../reducers/actions";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 
 function Meal() {
 	const { id } = useParams();
@@ -31,7 +31,7 @@ function Meal() {
                 payload: data,
 
             });
-			console.log(state.meal[0].name);
+			//console.log(data[0].name);
 
         };
 
@@ -39,7 +39,7 @@ function Meal() {
 
         fetchMeal();
 
-    }, [request]);
+    }, [request,id,dispatch]);
 
 	return (
 		<>

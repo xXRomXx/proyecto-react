@@ -13,15 +13,6 @@ function MenuPage() {
         const BASE_URL = "https://react-http-e1a33-default-rtdb.firebaseio.com/";
 
         const fetchMeals = async () => {
-
-
-
-
-
-			
-
-
-
             const url = `${BASE_URL}/dishes.json?orderBy="$key"`;
 
             const data = await request({ url });

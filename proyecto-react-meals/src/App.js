@@ -9,6 +9,7 @@ import initialState from "./reducers/initialState";
 import { useReducer } from "react";
 import Navbar from "./ui/navbar";
 import CartModal from "./components/cart-modal";
+import Portada from "./pages/portada";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 					<Route path="/menu" element={<Menu />} />
 					<Route path="/checkout" element={<Checkout />} />
 					<Route path="/meal/:id" element={<Meal />} />
+          <Route path="/" element={<Portada />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
       </BrowserRouter>

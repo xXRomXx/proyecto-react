@@ -1,0 +1,28 @@
+.portada.container {
+    padding: 10px 30px;
+  }
+    img {
+      width: 500px;
+      height: 400px;
+      display: flex;
+   }
+    .title{
+        font-size: large;
+        font-family: 'Courier New', Courier;
+        text-align: center;
+        margin: 5%;
+        font-weight: boldest;
+    }
+    .container-image{
+        display: flex;
+        justify-content: center;
+    }
+    .container-link{
+        display: flex;
+        margin: 5%;
+        justify-content: center;
+        font-family: 'Courier New', Courier;
+        text-decoration: none;
+        color: brown;
+        font-weight: bolder;
+    }
