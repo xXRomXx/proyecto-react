@@ -35,7 +35,7 @@
     justify-content: space-between;
   }
 
-  menu-item > article :hover{
+  .menu-item > article :hover{
     display: flex;
     background-color: rgb(161, 161, 161);
     justify-content: space-between;
