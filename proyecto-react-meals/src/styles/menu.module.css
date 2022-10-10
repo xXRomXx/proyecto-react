@@ -2,10 +2,14 @@
   padding: 10px 30px;
 }
 
-  img {
-    width: 100px;
-    height: 100px;
- }
+.img-meal{
+  float: right;
+  vertical-align: text-top;
+  margin-right:35px;
+  margin: 0;
+  width: 130px;
+  height: 130px;
+}
   
   .menu {
     background-color: rgb(255, 255, 255);
@@ -17,9 +21,9 @@
   }
   
   .menu > article {
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    border-bottom: 1em solid #aaa;
+    padding-bottom: 2em;
+    padding-top: 2em;
   }
   
   .menu > article:last-child {
@@ -43,14 +47,14 @@
   
   .menu-item > div:nth-child(1) > p {
     margin: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5em;
+    margin-bottom: 5em;
     font-style: italic;
   }
   
   .menu-item > div:nth-child(1) > small {
     color: #e53935;
-    font-size: 18px;
+    font-size: 18em;
     font-weight: bold;
   }
   

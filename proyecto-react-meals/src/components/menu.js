@@ -52,10 +52,9 @@ function Menu() {
 								<div className="row">
 									
 									<div className="col" onClick={() => goToMeal(item.id)}>
-
-										<div className="col">
-											<img src={item.imageURL} alt={"Imagen de "+item.name+" no disponible.".toString()}></img>
-										</div>
+											<img
+											className={styles["img-meal"]}
+											 src={item.imageURL} alt={"Imagen de "+item.name+" no disponible.".toString()}></img>
 
 										<div className="col">
 										<h1>{item.name}</h1>

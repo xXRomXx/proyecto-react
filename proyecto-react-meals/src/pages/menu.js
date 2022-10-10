@@ -16,6 +16,12 @@ function MenuPage() {
 
 
 
+
+
+			
+
+
+
             const url = `${BASE_URL}/dishes.json?orderBy="$key"`;
 
             const data = await request({ url });

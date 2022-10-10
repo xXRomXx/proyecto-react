@@ -48,12 +48,12 @@ function CartModal() {
 			<Backdrop />
 			<Modal>
 				<ul className={styles["cart-modal"]}>
-					<div className="Container">
+					<div className="container">
 						<div class="col-11">{state.cart.map((cartItem) => (
 						<li>
 							<section className={styles["cart-item"]}>
 								<article>
-									<img size="25px" src={cartItem.meal.imageURL} alt={"Imagen de "+cartItem.meal.name+" no disponible.".toString()}></img>
+									<img className={styles["img-meal"]} src={cartItem.meal.imageURL} alt={"Imagen de "+cartItem.meal.name+" no disponible.".toString()}></img>
 									<h2>{cartItem.meal.name}</h2>
 									<div>
 										<h4>$ {cartItem.meal.price}</h4>

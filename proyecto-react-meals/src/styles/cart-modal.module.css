@@ -4,6 +4,14 @@
     padding: 0;
   }
   
+.img-meal{
+  float: right;
+  vertical-align: text-top;
+  margin-right:35px;
+  margin: 0;
+  width: 130px;
+  height: 130px;
+}
   .cart-modal > li {
     margin: 0;
     padding: 0;
