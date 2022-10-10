@@ -9,14 +9,37 @@ import {
 
 const taskForm = document.getElementById("task-form");
 const tasksContainer = document.getElementById("tasks-container");
+//var requirejs = require('requirejs');
+
+//requirejs.config({
+    //Pass the top-level main.js/index.js require
+    //function to requirejs so that node modules
+    //are loaded relative to the top-level JS file.
+    //nodeRequire: require
+//});
+
 //import fs from 'fs';
 //import {fs} from 'fs';
+//import fs from 'fs';
+//const edit = require(['edit-json-file']);
+//let file = edit(`./menu.json`);
+//
+//function sobreEscribir (data) {
+//    console.log("SOBREESCRIBIENDO...")
+//    file.empty();
+//    console.log("Archivo vacio " + file.get());
+//    console.log(data);
+//    file.set(`./menu.json`, data);
+//    file.save();
+//    console.log(file.get());
+//}
 
-import sobreEscribir from '../DBloader.js';
+//import {sobreEscribir} from '../DBloader.js';
 
 let editStatus = false;
 let id = "";
 //const fs = require("fs");
+
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   // const querySnapshot = await getTasks();
@@ -27,12 +50,14 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   onGetTasks((querySnapshot) => {
     tasksContainer.innerHTML = "";
 
-    sobreEscribir(querySnapshot);
+    //sobreEscribir(querySnapshot);
 
     querySnapshot.forEach((doc) => {
       const task = doc.data();
-
-     console.table(task);
+      //data.push(task);
+      console.table(task);
+      
+      //llamar();
 
       tasksContainer.innerHTML += `
       <div class="card card-body mt-2 border-primary">
@@ -79,10 +104,16 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         } catch (error) {
           console.log(error);
         }
+        
       });
     });
   });
 });
+
+//export function llamar() {
+//  console.log(data);
+//  return data;
+//}
 
 taskForm.addEventListener("submit", async (e) => {
   e.preventDefault();
