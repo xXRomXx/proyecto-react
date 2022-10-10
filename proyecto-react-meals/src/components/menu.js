@@ -9,14 +9,8 @@ import { FcPlus } from 'react-icons/fc';
 
 import {
 	onGetTasks,
-  } from "./database/firebase.js";
+  } from "../database/firebase.js";
   
-  const taskForm = document.getElementById("task-form");
-  const tasksContainer = document.getElementById("tasks-container");
-  
-  let editStatus = false;
-  let id = "";
-
 function Menu() {
 
 	useEffect(() => {
@@ -29,8 +23,7 @@ function Menu() {
 	  
 		  querySnapshot.forEach((doc) => {
 			const task = doc.data();
-	  
-		   console.table(task);
+			console.log(task);
 		  
 		  });
 		});

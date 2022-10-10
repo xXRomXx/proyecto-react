@@ -1,30 +1,28 @@
-[
+{
+  "dishes": [
     {
       "id": 100,
-      "imageURL": "https://www.philadelphia.com.mx/modx/assets/img/recetas/2022/cuaresma%20feb%202022/1200x700_%20SUSHI%20DE%20CAMARONES%20CON%20PHILLY%C2%AE.jpg",
-      "name": "Sushi",
+      "name": "Huevito",
       "price": 199,
       "description": "Preparado con nuestro mejor salmón"
     },
     {
       "id": 200,
-      "imageURL": "https://www.pequerecetas.com/wp-content/uploads/2021/01/wiener-schnitzel.jpg",
-      "name": "Schnitzel",
+      "name": "Chilaquiles",
       "price": 99,
       "description": "Una especialidad Alemana"
     },
     {
       "id": 300,
-      "imageURL": "https://i.blogs.es/23068c/enchiladas-verdes-rellenas-de-queso-1-/1366_2000.jpg",
-      "name": "Enchiladas",
+      "name": "Higado encebollado",
       "price": 129,
       "description": "Platillo típico mexicano"
     },
     {
       "id": 400,
-      "imageURL": "https://www.comedera.com/wp-content/uploads/2017/08/tacos-al-pastor-receta.jpg",
-      "name": "Taquitos al Pastor",
+      "name": "Tostadas",
       "price": 25,
       "description": "El mejor platillo del mundo mundial"
     }
   ]
+}
