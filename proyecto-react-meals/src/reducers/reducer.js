@@ -49,6 +49,12 @@ function reducer(state, action) {
 				meal: action.payload,
 			};
 
+		case actions.DELETE_MEAL:
+			return {
+				...state,
+				cart: []
+			};
+
 		default:
 			throw new Error("No existe dicha acción");
 	}

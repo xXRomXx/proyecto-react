@@ -3,27 +3,51 @@ import { useParams } from "react-router-dom";
 import StateContext from "../contexts/state";
 import useHttp from "../hooks/useHttp";
 import actions from "../reducers/actions";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Meal() {
 	const { id } = useParams();
 	const { dispatch, state } = useContext(StateContext);
 
+	//const { meal, setMeal } = useState();
+
 	const { request } = useHttp();
 
 	useEffect(() => {
-		async function fetchMeal() {
-			const data = await request({ url: `http://localhost:8080/meals/${id}`});
-			dispatch({
-				type: actions.SET_MEAL,
-				payload: data,
-			});
-		}
 
-		fetchMeal();
-	}, [request]);
+        const BASE_URL = "https://react-http-e1a33-default-rtdb.firebaseio.com/";
 
-	return <h1>{state.meal.name}</h1>;
+        const fetchMeal = async () => {
+
+            const url = `${BASE_URL}/dishes.json?orderBy="$key"&startAt="${id}"&endAt="${id}"`;
+
+            const data = await request({ url });
+			//setMeal(data[0].name);
+
+            dispatch({
+
+                type: actions.SET_MEAL,
+
+                payload: data,
+
+            });
+			console.log(state.meal[0].name);
+
+        };
+
+
+
+        fetchMeal();
+
+    }, [request]);
+
+	return (
+		<>
+		<h1>{state.meal[0].name}</h1>
+		<h4>{state.meal[0].description}</h4>
+		</>
+	)
+	
 }
 
 export default Meal;

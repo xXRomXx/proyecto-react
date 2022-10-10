@@ -8,18 +8,23 @@ import actions from "../reducers/actions";
 import { Link } from "react-router-dom";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { FcPlus } from 'react-icons/fc';
-import { Slider } from 'primereact/slider';
-import ReactSlider from "react-slider";
 import 'rc-slider/assets/index.css';
 
 
 function CartModal() {
 	const { state, dispatch } = useContext(StateContext);
 
-	function closeModal() {
+	function closeModal(bol) {
 		dispatch({
 			type: actions.CLOSE_MODAL,
 		});
+	}
+
+	function cancelarCarrito() {
+		closeModal();
+		dispatch({
+			type: actions.DELETE_MEAL
+		})
 	}
 
 	function increment(id) {
@@ -53,7 +58,7 @@ function CartModal() {
 						<li>
 							<section className={styles["cart-item"]}>
 								<article>
-									<img className={styles["img-meal"]} src={cartItem.meal.imageURL} alt={"Imagen de "+cartItem.meal.name+" no disponible.".toString()}></img>
+									{/*</section><img className={styles["img-meal"]} src={cartItem.meal.imageURL} alt={"Imagen de "+cartItem.meal.name+" no disponible.".toString()}></img>*/}
 									<h2>{cartItem.meal.name}</h2>
 									<div>
 										<h4>$ {cartItem.meal.price}</h4>
@@ -92,10 +97,10 @@ function CartModal() {
 						<Link to="/checkout" onClick={closeModal}>
 							<Button>Ordenar</Button>
 						</Link>
+						<Button outline onClick={cancelarCarrito}>
+							Borrar
+						</Button>
 					</li>
-					</div>
-					<div class="col">
-						<Slider orientation="vertical" ></Slider>
 					</div>
 					</div>
 					

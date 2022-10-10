@@ -5,12 +5,12 @@
   }
   
 .img-meal{
-  float: right;
+  float: left;
   vertical-align: text-top;
   margin-right:35px;
   margin: 0;
-  width: 130px;
-  height: 130px;
+  width: 30px;
+  height: 30px;
 }
   .cart-modal > li {
     margin: 0;

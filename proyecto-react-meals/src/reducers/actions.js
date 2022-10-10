@@ -13,6 +13,8 @@ const actions = {
 
 	// Acción que "selecciona" un platillo
 	SET_MEAL: "SET_MEAL",
+
+	DELETE_MEAL: "DELETE_MEAL"
 };
 
 export default actions;
