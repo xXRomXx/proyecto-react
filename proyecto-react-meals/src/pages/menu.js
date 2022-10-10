@@ -8,14 +8,29 @@ function MenuPage() {
 
 	const { request } = useHttp();
 
-	useEffect(() => {
-		async function fetchMeals() {
-			const data = await request({ url: "http://localhost:8080/meals" });
-			setMeals(data || []);
-		}
+    useEffect(() => {
 
-		fetchMeals();
-	}, [request]);
+        const BASE_URL = "https://react-http-e1a33-default-rtdb.firebaseio.com/";
+
+        const fetchMeals = async () => {
+
+
+
+            const url = `${BASE_URL}/dishes.json?orderBy="$key"`;
+
+            const data = await request({ url });
+
+            setMeals(data || []);
+
+            console.log(data);
+
+        };
+
+
+
+        fetchMeals();
+
+    }, [request]);
 
 	return (
 		<MenuContext.Provider value={meals}>
