@@ -1,13 +1,41 @@
 import styles from "../styles/menu.module.css";
 import Button from "../ui/button";
 import MenuContext from "../contexts/menu";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useEffect} from "react";
 import StateContext from "../contexts/state";
 import actions from "../reducers/actions";
 import { useNavigate } from "react-router-dom";
 import { FcPlus } from 'react-icons/fc';
 
+import {
+	onGetTasks,
+  } from "./database/firebase.js";
+  
+  const taskForm = document.getElementById("task-form");
+  const tasksContainer = document.getElementById("tasks-container");
+  
+  let editStatus = false;
+  let id = "";
+
 function Menu() {
+
+	useEffect(() => {
+		// const querySnapshot = await getTasks();
+		// querySnapshot.forEach((doc) => {
+		//   console.log(doc.data());
+		// });
+	  
+		onGetTasks((querySnapshot) => {
+	  
+		  querySnapshot.forEach((doc) => {
+			const task = doc.data();
+	  
+		   console.table(task);
+		  
+		  });
+		});
+	  }, []);
+
 	const inputs = useRef([]);
 	const meals = useContext(MenuContext);
 	const { dispatch } = useContext(StateContext);
@@ -30,27 +58,6 @@ function Menu() {
 	// Redirección a nivel de programación
 	function goToMeal(id) {
 		navigate(`/meal/${id}`);
-	}
-
-	async function getImage(imageURL) {
-		fetch(imageURL, {
-			mode : 'no-cors'
-		})
-		.then((response) => {
-			console.log(response);
-			return response.toString();
-		})
-		.catch((error) => {
-			console.error(error);
-		});
-
-//		try {
-//		    let response = await fetch(imageURL);
-//		    let responseJson = await response.json();
-//		    return responseJson.toString();
-//		   } catch(error) {
-//		    console.error(error);
-//		  }
 	}
 
 	return (
